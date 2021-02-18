@@ -64,7 +64,6 @@ public class TestCases
    @Test
    public void testThenComparing()
    {
-      Comparator<Song> ct = (o1, o2) -> {return o1.getArtist().compareTo(o2.getArtist());};
       Comparator<Song> ta = Comparator.comparing(Song::getTitle).thenComparing(Song::getArtist);
       assertTrue(ta.compare(songs[3], songs[5]) > 0);
    }
